@@ -1,7 +1,7 @@
 package message
 
 import (
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/bytecounter"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/bytecounter"
 )
 
 // ReadWriter is a message reader/writer.

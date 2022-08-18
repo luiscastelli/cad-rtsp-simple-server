@@ -1,7 +1,7 @@
 package message
 
 import (
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/rawmessage"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/rawmessage"
 )
 
 const (

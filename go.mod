@@ -1,4 +1,4 @@
-module github.com/aler9/rtsp-simple-server
+module github.com/luiscastelli/cad-rtsp-simple-server
 
 go 1.17
 

@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/aler9/rtsp-simple-server/internal/logger"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/logger"
 )
 
 // LogDestinations is the logDestionations parameter.

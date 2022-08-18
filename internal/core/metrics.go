@@ -10,7 +10,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/aler9/rtsp-simple-server/internal/logger"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/logger"
 )
 
 func metric(key string, value int64) string {

@@ -3,8 +3,8 @@ package message
 import (
 	"github.com/notedit/rtmp/format/flv/flvio"
 
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/chunk"
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/rawmessage"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/chunk"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/rawmessage"
 )
 
 // MsgDataAMF0 is a AMF0 data message.

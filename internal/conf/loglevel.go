@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/aler9/rtsp-simple-server/internal/logger"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/logger"
 )
 
 // LogLevel is the logLevel parameter.

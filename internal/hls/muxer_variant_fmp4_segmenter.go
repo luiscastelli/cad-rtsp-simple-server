@@ -7,7 +7,7 @@ import (
 	"github.com/aler9/gortsplib"
 	"github.com/aler9/gortsplib/pkg/h264"
 
-	"github.com/aler9/rtsp-simple-server/internal/hls/fmp4"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/hls/fmp4"
 )
 
 func partDurationIsCompatible(partDuration time.Duration, sampleDuration time.Duration) bool {

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/bytecounter"
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/chunk"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/bytecounter"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/chunk"
 )
 
 var errMoreChunksNeeded = errors.New("more chunks are needed")

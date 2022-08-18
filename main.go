@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/aler9/rtsp-simple-server/internal/core"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/core"
 )
 
 func main() {

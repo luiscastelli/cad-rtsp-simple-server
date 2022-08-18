@@ -8,7 +8,7 @@ import (
 
 	"github.com/aler9/gortsplib"
 
-	"github.com/aler9/rtsp-simple-server/internal/hls/fmp4"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/hls/fmp4"
 )
 
 type muxerVariantFMP4 struct {

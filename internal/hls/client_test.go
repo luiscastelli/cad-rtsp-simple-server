@@ -18,7 +18,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 
-	"github.com/aler9/rtsp-simple-server/internal/logger"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/logger"
 )
 
 type testLogger struct{}

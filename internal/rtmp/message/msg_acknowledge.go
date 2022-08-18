@@ -3,8 +3,8 @@ package message //nolint:dupl
 import (
 	"fmt"
 
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/chunk"
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/rawmessage"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/chunk"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/rawmessage"
 )
 
 // MsgAcknowledge is an acknowledgement message.

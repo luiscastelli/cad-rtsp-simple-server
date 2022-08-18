@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/bytecounter"
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/chunk"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/bytecounter"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/chunk"
 	"github.com/stretchr/testify/require"
 )
 

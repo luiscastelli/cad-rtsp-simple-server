@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aler9/rtsp-simple-server/internal/conf"
-	"github.com/aler9/rtsp-simple-server/internal/logger"
-	"github.com/aler9/rtsp-simple-server/internal/rpicamera"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/conf"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/logger"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rpicamera"
 )
 
 const (

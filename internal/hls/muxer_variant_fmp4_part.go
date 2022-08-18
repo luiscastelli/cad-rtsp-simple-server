@@ -9,7 +9,7 @@ import (
 	"github.com/aler9/gortsplib"
 	"github.com/aler9/gortsplib/pkg/mpeg4audio"
 
-	"github.com/aler9/rtsp-simple-server/internal/hls/fmp4"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/hls/fmp4"
 )
 
 func fmp4PartName(id uint64) string {

@@ -17,9 +17,9 @@ import (
 	"github.com/aler9/gortsplib/pkg/rtpmpeg4audio"
 	"github.com/gin-gonic/gin"
 
-	"github.com/aler9/rtsp-simple-server/internal/conf"
-	"github.com/aler9/rtsp-simple-server/internal/hls"
-	"github.com/aler9/rtsp-simple-server/internal/logger"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/conf"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/hls"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/logger"
 )
 
 const (

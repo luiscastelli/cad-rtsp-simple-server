@@ -12,8 +12,8 @@ import (
 	"github.com/notedit/rtmp/format/flv/flvio"
 	"github.com/stretchr/testify/require"
 
-	"github.com/aler9/rtsp-simple-server/internal/rtmp"
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/message"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/message"
 )
 
 func TestRTMPSource(t *testing.T) {

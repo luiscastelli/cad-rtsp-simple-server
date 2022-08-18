@@ -15,7 +15,7 @@ import (
 	"golang.org/x/crypto/nacl/secretbox"
 	"gopkg.in/yaml.v2"
 
-	"github.com/aler9/rtsp-simple-server/internal/logger"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/logger"
 )
 
 func decrypt(key string, byts []byte) ([]byte, error) {

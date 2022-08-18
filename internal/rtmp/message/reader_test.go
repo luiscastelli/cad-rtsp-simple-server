@@ -8,7 +8,7 @@ import (
 	"github.com/notedit/rtmp/format/flv/flvio"
 	"github.com/stretchr/testify/require"
 
-	"github.com/aler9/rtsp-simple-server/internal/rtmp/bytecounter"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rtmp/bytecounter"
 )
 
 var readWriterCases = []struct {

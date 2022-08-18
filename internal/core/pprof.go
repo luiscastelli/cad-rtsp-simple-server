@@ -8,7 +8,7 @@ import (
 	// start pprof
 	_ "net/http/pprof"
 
-	"github.com/aler9/rtsp-simple-server/internal/logger"
+	"github.com/luiscastelli/cad-rtsp-simple-server/internal/logger"
 )
 
 type pprofParent interface {

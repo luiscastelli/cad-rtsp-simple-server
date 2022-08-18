@@ -1,0 +1,92 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+MAKE Version 5.43  Copyright (c) 1987, 2019 Embarcadero Technologies, Inc.
+Error makefile 9: Command syntax error
+Error makefile 30: Command syntax error
+Error makefile 32: Command syntax error
+Error makefile 33: Command syntax error
+Error makefile 50: Command syntax error
+Error makefile 51: Command syntax error
+Error makefile 52: Command syntax error
+Error makefile 53: Command syntax error
+Error makefile 54: Command syntax error
+Error makefile 55: Command syntax error
+Error makefile 56:  
+Command syntax error
+Error makefile 57: Command syntax error
+Error makefile 58: Command syntax error
+Error makefile 78: Command syntax error
+Error makefile 81: Command syntax error
+Error makefile 109: Command syntax error
+Error makefile 110: Command syntax error
+Error makefile 111: Command syntax error
+Error makefile 112: Command syntax error
+Error makefile 113: Command syntax error
+Error makefile 114: Command syntax error
+Error makefile 115: Command syntax error
+Error makefile 116: Command syntax error
+Error makefile 117: Command syntax error
+Error makefile 118: Command syntax error
+Error makefile 119: Command syntax error
+Error makefile 120: Command syntax error
+Error makefile 121: Command syntax error
+Error makefile 123: Command syntax error
+Error makefile 146: Command syntax error
+Error makefile 147: Command syntax error
+Error makefile 157: Command syntax error
+Error makefile 158: Command syntax error
+Error makefile 159: Redefinition of target 'RUN'
+Error makefile 159: Command syntax error
+Error makefile 160: Command syntax error
+Error makefile 161: Command syntax error
+Error makefile 168: Command syntax error
+Error makefile 169: Command syntax error
+Error makefile 170: Redefinition of target 'RUN'
+Error makefile 170: Command syntax error
+Error makefile 171: Command syntax error
+Error makefile 172: Command syntax error
+Error makefile 179: Command syntax error
+Error makefile 180: Command syntax error
+Error makefile 181: Redefinition of target 'RUN'
+Error makefile 181: Command syntax error
+Error makefile 182: Redefinition of target 'RUN'
+Error makefile 182: Command syntax error
+Error makefile 183: Command syntax error
+Error makefile 184: Command syntax error
+Error makefile 185: Redefinition of target 'RUN'
+Error makefile 185: Command syntax error
+Error makefile 187: Command syntax error
+Error makefile 188: Redefinition of target 'RUN'
+Error makefile 188: Command syntax error
+Error makefile 189: Redefinition of target 'RUN'
+Error makefile 189: Command syntax error
+Error makefile 190: Command syntax error
+Error makefile 191: Command syntax error
+Error makefile 192: Redefinition of target 'RUN'
+Error makefile 192: Command syntax error
+Error makefile 194: Command syntax error
+Error makefile 195: Redefinition of target 'RUN'
+Error makefile 195: Command syntax error
+Error makefile 196: Command syntax error
+Error makefile 197: Command syntax error
+Error makefile 198: Redefinition of target 'RUN'
+Error makefile 198: Command syntax error
+Error makefile 199: Command syntax error
+Error makefile 201: Command syntax error
+Error makefile 202: Command syntax error
+Error makefile 203: Redefinition of target 'RUN'
+Error makefile 203: Command syntax error
+Error makefile 204: Redefinition of target 'RUN'
+Error makefile 204: Command syntax error
+Error makefile 207: Redefinition of target 'RUN'
+Error makefile 207: Command syntax error
+Error makefile 218: Redefinition of target 'RUN'
+Error makefile 218: Command syntax error
+Error makefile 223: Redefinition of target 'RUN'
+Error makefile 223:  
+Command syntax error
+Error makefile 228: Redefinition of target 'RUN'
+Error makefile 228: Command syntax error
+Error makefile 229: Command syntax error
+Error makefile 230: Command syntax error
+*** 86 errors during make ***
+ 
