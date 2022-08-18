@@ -53,8 +53,8 @@ func New(args []string) (*Core, bool) {
 		"rtsp-simple-server "+version+"\n\nRTSP server.")
 
 	argVersion := k.Flag("version", "print version").Bool()
-	argConfPath := k.Arg("confpath", "path to a config file. The default is rtsp-simple-server.yml.").
-		Default("rtsp-simple-server.yml").String()
+	argConfPath := k.Arg("confpath", "path to a config file. The default is cadrtspss.yml.").
+		Default("cadrtspss.yml").String()
 
 	kingpin.MustParse(k.Parse(args))
 

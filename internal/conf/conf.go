@@ -38,9 +38,9 @@ func decrypt(key string, byts []byte) ([]byte, error) {
 }
 
 func loadFromFile(fpath string, conf *Conf) (bool, error) {
-	// rtsp-simple-server.yml is optional
+	// cadrtspss.yml is optional
 	// other configuration files are not
-	if fpath == "rtsp-simple-server.yml" {
+	if fpath == "cadrtspss.yml" {
 		if _, err := os.Stat(fpath); err != nil {
 			return false, nil
 		}

@@ -147,17 +147,17 @@ Please keep in mind that the Docker image doesn't include _FFmpeg_. if you need 
 
 ### Configuration
 
-All the configuration parameters are listed and commented in the [configuration file](rtsp-simple-server.yml).
+All the configuration parameters are listed and commented in the [configuration file](cadrtspss.yml).
 
 There are 3 ways to change the configuration:
 
-1. By editing the `rtsp-simple-server.yml` file, that is
+1. By editing the `cadrtspss.yml` file, that is
 
    * included into the release bundle
-   * available in the root folder of the Docker image (`/rtsp-simple-server.yml`); it can be overridden in this way:
+   * available in the root folder of the Docker image (`/cadrtspss.yml`); it can be overridden in this way:
 
      ```
-     docker run --rm -it --network=host -v $PWD/rtsp-simple-server.yml:/rtsp-simple-server.yml aler9/rtsp-simple-server
+     docker run --rm -it --network=host -v $PWD/cadrtspss.yml:/cadrtspss.yml aler9/rtsp-simple-server
      ```
 
    The configuration can be changed dynamically when the server is running (hot reloading) by writing to the configuration file. Changes are detected and applied without disconnecting existing clients, whenever it's possible.
@@ -189,7 +189,7 @@ There are 3 ways to change the configuration:
 
 ### Authentication
 
-Edit `rtsp-simple-server.yml` and replace everything inside section `paths` with the following content:
+Edit `cadrtspss.yml` and replace everything inside section `paths` with the following content:
 
 ```yml
 paths:
@@ -291,7 +291,7 @@ _rtsp-simple-server_ is also a proxy, that is usually deployed in one of these s
 * when there are multiple users that are reading a stream and the bandwidth is limited; the proxy is used to receive the stream once. Users can then connect to the proxy instead of the original source.
 * when there's a NAT / firewall between a stream and the users; the proxy is installed on the NAT and makes the stream available to the outside world.
 
-Edit `rtsp-simple-server.yml` and replace everything inside section `paths` with the following content:
+Edit `cadrtspss.yml` and replace everything inside section `paths` with the following content:
 
 ```yml
 paths:
@@ -322,7 +322,7 @@ paths:
 
 ### Remuxing, re-encoding, compression
 
-To change the format, codec or compression of a stream, use _FFmpeg_ or _GStreamer_ together with _rtsp-simple-server_. For instance, to re-encode an existing stream, that is available in the `/original` path, and publish the resulting stream in the `/compressed` path, edit `rtsp-simple-server.yml` and replace everything inside section `paths` with the following content:
+To change the format, codec or compression of a stream, use _FFmpeg_ or _GStreamer_ together with _rtsp-simple-server_. For instance, to re-encode an existing stream, that is available in the `/original` path, and publish the resulting stream in the `/compressed` path, edit `cadrtspss.yml` and replace everything inside section `paths` with the following content:
 
 ```yml
 paths:
@@ -348,7 +348,7 @@ In the example configuration, streams are saved into TS files, that can be read 
 
 ### On-demand publishing
 
-Edit `rtsp-simple-server.yml` and replace everything inside section `paths` with the following content:
+Edit `cadrtspss.yml` and replace everything inside section `paths` with the following content:
 
 ```yml
 paths:
@@ -369,7 +369,7 @@ Download a release bundle from the [release page](https://github.com/luiscastell
 
 ```
 sudo mv rtsp-simple-server /usr/local/bin/
-sudo mv rtsp-simple-server.yml /usr/local/etc/
+sudo mv cadrtspss.yml /usr/local/etc/
 ```
 
 Create the service:
@@ -379,7 +379,7 @@ sudo tee /etc/systemd/system/rtsp-simple-server.service >/dev/null << EOF
 [Unit]
 Wants=network.target
 [Service]
-ExecStart=/usr/local/bin/rtsp-simple-server /usr/local/etc/rtsp-simple-server.yml
+ExecStart=/usr/local/bin/rtsp-simple-server /usr/local/etc/cadrtspss.yml
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -497,7 +497,7 @@ make run
 
 ### From a webcam
 
-To publish the video stream of a generic webcam to the server, edit `rtsp-simple-server.yml` and replace everything inside section `paths` with the following content:
+To publish the video stream of a generic webcam to the server, edit `cadrtspss.yml` and replace everything inside section `paths` with the following content:
 
 ```yml
 paths:
@@ -537,7 +537,7 @@ _rtsp-simple-server_ natively support the Raspberry Pi Camera, enabling high-qua
 
    Then go to `Interfacing options`, `enable/disable legacy camera support`, choose `no`. Reboot the system.
 
-3. edit `rtsp-simple-server.yml` and replace everything inside section `paths` with the following content:
+3. edit `cadrtspss.yml` and replace everything inside section `paths` with the following content:
 
    ```yml
    paths:
@@ -701,7 +701,7 @@ openssl genrsa -out server.key 2048
 openssl req -new -x509 -sha256 -key server.key -out server.crt -days 3650
 ```
 
-Edit `rtsp-simple-server.yml`, and set the `protocols`, `encryption`, `serverKey` and `serverCert` parameters:
+Edit `cadrtspss.yml`, and set the `protocols`, `encryption`, `serverKey` and `serverCert` parameters:
 
 ```yml
 protocols: [tcp]
@@ -805,7 +805,7 @@ openssl genrsa -out server.key 2048
 openssl req -new -x509 -sha256 -key server.key -out server.crt -days 3650
 ```
 
-Edit `rtsp-simple-server.yml`, and set the `rtmpEncryption`, `rtmpServerKey` and `rtmpServerCert` parameters:
+Edit `cadrtspss.yml`, and set the `rtmpEncryption`, `rtmpServerKey` and `rtmpServerCert` parameters:
 
 ```yml
 rtmpEncryption: optional

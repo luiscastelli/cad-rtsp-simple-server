@@ -115,7 +115,7 @@ COPY . ./
 RUN go build -o /out .
 WORKDIR /
 ARG CONFIG_RUN
-RUN echo "$$CONFIG_RUN" > rtsp-simple-server.yml
+RUN echo "$$CONFIG_RUN" > cadrtspss.yml
 endef
 export DOCKERFILE_RUN
 
@@ -200,30 +200,30 @@ COPY . ./
 ENV VERSION $(shell git describe --tags)
 ENV CGO_ENABLED 0
 RUN mkdir tmp release
-RUN cp rtsp-simple-server.yml tmp/
+RUN cp cadrtspss.yml tmp/
 
 RUN GOOS=windows GOARCH=amd64 go build -ldflags "-X github.com/luiscastelli/cad-rtsp-simple-server/internal/core.version=$$VERSION" -o tmp/rtsp-simple-server.exe
-RUN cd tmp && zip -q ../release/rtsp-simple-server_$${VERSION}_windows_amd64.zip rtsp-simple-server.exe rtsp-simple-server.yml
+RUN cd tmp && zip -q ../release/rtsp-simple-server_$${VERSION}_windows_amd64.zip rtsp-simple-server.exe cadrtspss.yml
 
 RUN GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/luiscastelli/cad-rtsp-simple-server/internal/core.version=$$VERSION" -o tmp/rtsp-simple-server
-RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_linux_amd64.tar.gz --owner=0 --group=0 rtsp-simple-server rtsp-simple-server.yml
+RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_linux_amd64.tar.gz --owner=0 --group=0 rtsp-simple-server cadrtspss.yml
 
 RUN GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/luiscastelli/cad-rtsp-simple-server/internal/core.version=$$VERSION" -o tmp/rtsp-simple-server
-RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_darwin_amd64.tar.gz --owner=0 --group=0 rtsp-simple-server rtsp-simple-server.yml
+RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_darwin_amd64.tar.gz --owner=0 --group=0 rtsp-simple-server cadrtspss.yml
 
 COPY --from=rpicamera32 /s/internal/rpicamera/exe/exe internal/rpicamera/exe/
 RUN GOOS=linux GOARCH=arm GOARM=6 go build -ldflags "-X github.com/luiscastelli/cad-rtsp-simple-server/internal/core.version=$$VERSION" -o tmp/rtsp-simple-server -tags rpicamera
-RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_linux_armv6.tar.gz --owner=0 --group=0 rtsp-simple-server rtsp-simple-server.yml
+RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_linux_armv6.tar.gz --owner=0 --group=0 rtsp-simple-server cadrtspss.yml
 RUN rm internal/rpicamera/exe/exe
 
 COPY --from=rpicamera32 /s/internal/rpicamera/exe/exe internal/rpicamera/exe/
 RUN GOOS=linux GOARCH=arm GOARM=7 go build -ldflags "-X github.com/luiscastelli/cad-rtsp-simple-server/internal/core.version=$$VERSION" -o tmp/rtsp-simple-server -tags rpicamera
-RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_linux_armv7.tar.gz --owner=0 --group=0 rtsp-simple-server rtsp-simple-server.yml
+RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_linux_armv7.tar.gz --owner=0 --group=0 rtsp-simple-server cadrtspss.yml
 RUN rm internal/rpicamera/exe/exe
 
 COPY --from=rpicamera64 /s/internal/rpicamera/exe/exe internal/rpicamera/exe/
 RUN GOOS=linux GOARCH=arm64 go build -ldflags "-X github.com/luiscastelli/cad-rtsp-simple-server/internal/core.version=$$VERSION" -o tmp/rtsp-simple-server -tags rpicamera
-RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_linux_arm64v8.tar.gz --owner=0 --group=0 rtsp-simple-server rtsp-simple-server.yml
+RUN tar -C tmp -czf release/rtsp-simple-server_$${VERSION}_linux_arm64v8.tar.gz --owner=0 --group=0 rtsp-simple-server cadrtspss.yml
 RUN rm internal/rpicamera/exe/exe
 endef
 export DOCKERFILE_RELEASE
@@ -247,7 +247,7 @@ RUN export CGO_ENABLED=0 $${OPTS} \
 
 FROM scratch
 COPY --from=build /rtsp-simple-server /
-COPY --from=build /s/rtsp-simple-server.yml /
+COPY --from=build /s/cadrtspss.yml /
 ENTRYPOINT [ "/rtsp-simple-server" ]
 endef
 export DOCKERFILE_DOCKERHUB
