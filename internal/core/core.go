@@ -18,7 +18,7 @@ import (
 	"github.com/luiscastelli/cad-rtsp-simple-server/internal/rlimit"
 )
 
-var version = "v0.0.0"
+var version = "v1.0.101"
 
 // Core is an instance of rtsp-simple-server.
 type Core struct {
@@ -186,7 +186,7 @@ func (p *Core) createResources(initial bool) error {
 	}
 
 	if initial {
-		p.Log(logger.Info, "rtsp-simple-server %s", version)
+		p.Log(logger.Info, "cad-rtsp-simple-server %s", version)
 		if !p.confFound {
 			p.Log(logger.Warn, "configuration file not found, using an empty configuration")
 		}
